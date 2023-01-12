@@ -22,5 +22,6 @@
 NULL
 
 .onLoad <- function(libname, pkgname) {
+  options(java.parameters = c("-Duser.country=US", "-Duser.language=en"))
   rJava::.jpackage(pkgname, lib.loc = libname)
 }
